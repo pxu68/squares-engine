@@ -54,3 +54,13 @@ search:
   max_basin_runs_deprioritize: 200
   skip_near_square: true
   workers: 1
+
+evolve:
+  # Phase 5 program-evolution defaults (section 9). LLM used only if an API key
+  # is present (OPENAI_API_KEY / ANTHROPIC_API_KEY / GEMINI_API_KEY / GOOGLE_API_KEY).
+  generations: 3
+  population: 2
+  eval_budget_s: 5.0
+  heldout_frac: 0.35
+  sandbox_timeout_s: 30
+  sandbox_mem_mb: 512

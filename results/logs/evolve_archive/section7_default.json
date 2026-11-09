@@ -1,0 +1,29 @@
+{
+  "name": "section7_default",
+  "eta0": 0.01,
+  "temperature": 0.001,
+  "cool_factor": 0.995,
+  "seeded_expand": 1.002,
+  "max_lbfgs_iter": 80,
+  "energy_feasible": 1e-24,
+  "move_probs": [
+    0.25,
+    0.2,
+    0.2,
+    0.1,
+    0.15,
+    0.1
+  ],
+  "parent": null,
+  "method": "seed",
+  "generation": 0,
+  "notes": "",
+  "move_names": [
+    "translate",
+    "rotate",
+    "jiggle",
+    "swap_orientation",
+    "relocate",
+    "shift_row"
+  ]
+}

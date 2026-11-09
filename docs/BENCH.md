@@ -72,3 +72,29 @@ Hardware: same cloud agent VM. Seeded low-temperature anneal + Newton polish sam
 - `scripts/export_packings.py --all --exclude-origin imported` → 892 packings (imports excluded).
 - Re-verify from `squares.csv` alone: **892 / 892 passed** (~194 s wall with 4 workers).
 - Evidence: `results/export/no_imported/export_reverify.json`, `export_meta.json`, `L_by_n.csv` (large `squares.csv` gitignored).
+
+---
+
+# Phase 5
+
+## LLM availability
+
+**No API key** in the environment (checked `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `GOOGLE_API_KEY`; Cursor secrets list empty). Ran **stub-mutator dry-run** of the evolve loop (see `docs/ASSUMPTIONS.md` §42).
+
+## Evolve dry-run
+
+Command: `python3 scripts/run_phase5_evolve.py --force-stub --generations 3 --population 2 --budget-s 5`
+
+| Metric | Value |
+|---|---|
+| Mutator | stub (no LLM API key) |
+| Train n | 11, 17, 26, 27, 29, 41, 47 |
+| Held-out n | 18, 19, 28, 37, 53 |
+| Baseline train mean score | 0.143 |
+| Baseline held-out mean score | 0.0 |
+| Best accepted child | none |
+| Held-out improved over section-7 seed? | **no** (`improved_heldout=false`) |
+| Archive | `results/logs/evolve_archive/` |
+| Summary | `results/logs/phase5_evolve_summary.json` |
+
+**Acceptance:** the loop is wired (sandbox smoke ok; stub mutations evaluated on train+held-out; archive written) but **did not help** under stub mutations with 5 s eval budgets and no LLM. Re-run with a real API key + longer budgets when available.

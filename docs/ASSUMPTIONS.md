@@ -78,6 +78,14 @@ Assumptions made while implementing `SQUARE_PACKING_SPEC.md`. Ambiguities are re
 40. **Export** default CSV (`n,i,x,y,theta` + `L_by_n.csv`) remains a **placeholder** until checked against an official grader. `--exclude-origin imported` is the owner-required submission filter. Self-check rebuilds packings from `squares.csv` alone and runs `verify_full`.
 41. **Phase 4 search sampling (this VM):** full sweeps of n=51..324 and 325..1000 at default 10–30 min budgets are out of scope for a single cloud-agent wall-clock. We run a stratified sample via `scripts/run_phase4_search.py` (see `docs/BENCH.md`): 18 of 241 eligible n in 51..324 @ 20 s; 12 of 637 eligible n in 325..1000 @ 15 s; near-squares skipped; polish enabled. Zero improvements over Phase-2 baseline in this sample is an accepted finding; larger budgets belong on the R740.
 
+## Phase 5 — program evolution
+
+42. **No LLM API key** was available in this cloud-agent environment (`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `GOOGLE_API_KEY` all unset; Cursor app secrets list empty). Keys were **not** invented. The evolution loop therefore runs with a **stub mutator** that jitters search hyperparameters deterministically to prove wiring (fitness, train/held-out split, sandbox validation, archive).
+43. The mutable genome is a `SearchProgram` JSON object (move probabilities, `eta0`, temperature, cool factor, seeded expand, L-BFGS iters) — not packing coordinates and not free-form executable search code by default. Optional `LLMMutator` emits the same JSON schema when a key exists.
+44. **Fitness** is the mean over a sample of n of a score derived only from `verify_full`-approved L: relative gap `(L_found - L_best_known) / L_best_known`, with **no credit** (score 1.0) for unverified outputs or trivial grid results (`L >= ceil(sqrt(n))`). Lower is better.
+45. A child is **accepted** only if it improves **both** train and held-out mean scores over the section-7 seed program. Diverse programs are archived under `results/logs/evolve_archive/` regardless.
+46. Sandbox: `evolve.sandbox.run_python_sandboxed` runs child Python with `RLIMIT_CPU` / `RLIMIT_AS` best-effort, wall timeout, and strips LLM/cloud credential env vars.
+
 ## Phase scope
 
-42. Phase 5+ (program evolution, section 12 experiments) is not implemented yet.
+47. Section 12 optional experiments are not implemented (no measurement asked for them).
