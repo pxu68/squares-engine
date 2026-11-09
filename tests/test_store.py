@@ -60,11 +60,13 @@ def test_promote_requires_strictly_improved_L(store: BestStore):
     cand = Candidate(n=3, squares=grid_packing(3), origin="constructed", method="grid")
     ok1, _, rec1 = store.promote(cand)
     assert ok1 and rec1 is not None
-    # Same packing again: not an improvement
+    # Same packing again: not an improvement (record still returned for seed use)
     ok2, report2, rec2 = store.promote(cand)
     assert not ok2
-    assert rec2 is None
+    assert rec2 is not None
+    assert rec2["L"] == pytest.approx(rec1["L"])
     assert "not improved" in report2.reason
+    assert store.load(3)["method"] == "grid"
 
 
 def test_history_keeps_previous(store: BestStore):

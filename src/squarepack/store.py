@@ -129,10 +129,14 @@ class BestStore:
         history: list[dict[str, Any]] = []
         if hpath.is_file():
             with hpath.open("r", encoding="utf-8") as f:
-                history = json.load(f)
+                raw = json.load(f)
+            if isinstance(raw, list):
+                history = raw
+            elif isinstance(raw, dict) and isinstance(raw.get("history"), list):
+                history = list(raw["history"])
         history.append(record)
         history = history[-self.history_keep :]
-        _atomic_write_json(hpath, {"n": n, "history": history})  # type: ignore[arg-type]
+        _atomic_write_json(hpath, {"n": n, "history": history})
 
     def promote(self, candidate: Candidate) -> tuple[bool, VerifyReport, dict[str, Any] | None]:
         """Run full verification; replace stored best only if verified L improves.

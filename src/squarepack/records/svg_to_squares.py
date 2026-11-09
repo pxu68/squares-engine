@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import contextlib
+import io
 from decimal import Decimal, getcontext
 from pathlib import Path
 from typing import Any
@@ -25,9 +27,12 @@ def svg_to_packing(
     meta : entity dict and parse flags
     """
     svg_path = Path(svg_path)
-    squares_raw, entities, actual_precision, viewbox_centered = parse_svg(
-        str(svg_path), precision
-    )
+    # Upstream parser prints entity dumps; silence during batch import.
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        squares_raw, entities, actual_precision, viewbox_centered = parse_svg(
+            str(svg_path), precision
+        )
     if "s" not in entities:
         raise ValueError(f"SVG {svg_path} has no entity s (published side length)")
 

@@ -28,3 +28,18 @@ grid:
   # Grid baseline uses axis-aligned unit squares on a k x k lattice, k = ceil(sqrt(n))
   origin: constructed
   method: grid
+
+import:
+  index_url: https://kingbird.myphotos.cc/packing/squares_in_squares.html
+  min_request_interval_s: 1.0
+  parse_precision: 50
+  # Imports may need a larger dilation than exact grid constructions
+  delta_max: 1.0e-4
+  user_agent: squarepack-phase2/0.1 (+local research cache; 1 req/s)
+
+constructions:
+  goebel_max_strip: 10
+  goebel_max_rows: 6
+  composition_max_side: 7
+  construction_scan_cap: 150
+  removal_max_source_gap: 80
