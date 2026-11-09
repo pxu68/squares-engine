@@ -151,13 +151,7 @@ class BestStore:
         if not report.ok or report.L is None:
             return False, report, None
 
-        current = self.load(candidate.n)
-        if current is not None and float(current["L"]) <= float(report.L):
-            # Not an improvement (strictly smaller L required).
-            report.reason = (
-                f"verified but not improved: new L={report.L} vs stored L={current['L']}"
-            )
-            return False, report, None
+        report.extras["verified_squares"] = verified_squares
 
         record = {
             "n": candidate.n,
@@ -178,6 +172,14 @@ class BestStore:
                 [float(x), float(y), float(t)] for x, y, t in verified_squares.tolist()
             ],
         }
+
+        current = self.load(candidate.n)
+        if current is not None and float(current["L"]) <= float(report.L):
+            # Not an improvement (strictly smaller L required).
+            report.reason = (
+                f"verified but not improved: new L={report.L} vs stored L={current['L']}"
+            )
+            return False, report, record
 
         # Keep previous best in history before replacing.
         if current is not None:
