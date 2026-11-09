@@ -72,6 +72,12 @@ Assumptions made while implementing `SQUARE_PACKING_SPEC.md`. Ambiguities are re
 37. **Basin logs** live at `results/logs/basin_n{n}.json` with verified L histogram keys rounded to `1e-6`.
 38. Default wall-clock budgets in `config.yaml` follow the spec (10 / 30 minutes). Acceptance and laptop runs may pass shorter `--budget-s` overrides; measured times go in `docs/BENCH.md`.
 
+## Phase 4 — polish, export, seeded search at scale
+
+39. **Newton polish** (`polish.py`) builds a contact graph (`sep < 1e-7`, wall margins `< 1e-7`), shrinks centers by a sequence of `eta`, then resolves active contacts with `mpmath.findroot` on center displacements (angles fixed; one square pinned). Soft stay-near residuals pad underdetermined systems. Problem size is capped (`max_vars`) for VM runtime. Promotion still goes only through `store.promote` / full verify.
+40. **Export** default CSV (`n,i,x,y,theta` + `L_by_n.csv`) remains a **placeholder** until checked against an official grader. `--exclude-origin imported` is the owner-required submission filter. Self-check rebuilds packings from `squares.csv` alone and runs `verify_full`.
+41. **Phase 4 search sampling (this VM):** full sweeps of n=51..324 and 325..1000 at default 10–30 min budgets are out of scope for a single cloud-agent wall-clock. We run a stratified sample via `scripts/run_phase4_search.py` (see `docs/BENCH.md`): 18 of 241 eligible n in 51..324 @ 20 s; 12 of 637 eligible n in 325..1000 @ 15 s; near-squares skipped; polish enabled. Zero improvements over Phase-2 baseline in this sample is an accepted finding; larger budgets belong on the R740.
+
 ## Phase scope
 
-39. Phase 4+ (polish, export at scale, evolve, section 12) is not implemented yet.
+42. Phase 5+ (program evolution, section 12 experiments) is not implemented yet.
