@@ -1,0 +1,7 @@
+{
+  "n_max": 1000,
+  "baseline_csv": "/home/ubuntu/squarepack/results/baseline.csv",
+  "beat_grid": 261,
+  "imported_in_best": 108,
+  "import_report": null
+}

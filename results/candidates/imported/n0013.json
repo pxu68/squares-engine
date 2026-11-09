@@ -1,0 +1,89 @@
+{
+  "n": 13,
+  "L": 4.0,
+  "delta": 0.0,
+  "origin": "imported",
+  "method": "ellsworth_svg",
+  "seed": null,
+  "source": {
+    "finder": null,
+    "date": null,
+    "url": "https://kingbird.myphotos.cc/packing/square-13.svg",
+    "snapshot_time": "20261109T154125Z",
+    "L_published": 4.0,
+    "svg_file": "square-13.svg"
+  },
+  "verified": {
+    "float64": true,
+    "mp50": true,
+    "min_sep": 0.0,
+    "min_margin": 0.0
+  },
+  "squares": [
+    [
+      0.5,
+      3.5,
+      0.0
+    ],
+    [
+      0.5,
+      2.5,
+      0.0
+    ],
+    [
+      1.5,
+      2.5,
+      0.0
+    ],
+    [
+      2.5,
+      2.5,
+      0.0
+    ],
+    [
+      3.5,
+      2.5,
+      0.0
+    ],
+    [
+      0.5,
+      1.5,
+      0.0
+    ],
+    [
+      1.5,
+      1.5,
+      0.0
+    ],
+    [
+      2.5,
+      1.5,
+      0.0
+    ],
+    [
+      3.5,
+      1.5,
+      0.0
+    ],
+    [
+      0.5,
+      0.5,
+      0.0
+    ],
+    [
+      1.5,
+      0.5,
+      0.0
+    ],
+    [
+      2.5,
+      0.5,
+      0.0
+    ],
+    [
+      3.5,
+      0.5,
+      0.0
+    ]
+  ]
+}
