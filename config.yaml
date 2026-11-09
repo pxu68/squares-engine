@@ -1,0 +1,30 @@
+# Tunables for the square-packing pipeline (Phase 1+)
+paths:
+  results_best: results/best
+  results_candidates: results/candidates
+  results_logs: results/logs
+  data_records: data/records_snapshot
+
+geometry:
+  # Fast-filter tolerances (section 4.3)
+  fast_sep_tol: 1.0e-9
+  fast_contain_tol: 1.0e-9
+  cell_size: 1.5
+  # Pairs within this distance of contact need mpmath pass
+  contact_sep_threshold: 1.0e-6
+
+verification:
+  # Dilation defaults (section 4.5)
+  delta_default: 1.0e-12
+  delta_max: 1.0e-6
+  delta_growth: 10.0
+  mpmath_dps: 50
+  normalize: true
+
+store:
+  history_keep: 5
+
+grid:
+  # Grid baseline uses axis-aligned unit squares on a k x k lattice, k = ceil(sqrt(n))
+  origin: constructed
+  method: grid
