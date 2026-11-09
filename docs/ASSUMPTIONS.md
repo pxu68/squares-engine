@@ -63,6 +63,15 @@ Assumptions made while implementing `SQUARE_PACKING_SPEC.md`. Ambiguities are re
 31. **Neighbor seeds** in Phase 2 are geometric only (remove-one / insert-into-largest-hole). Section-7 local relaxation is **not** applied until Phase 3.
 32. Expensive Goebel/composition scans default to `n ≤ construction_scan_cap` (150) in `scripts/build_baseline.py`; removal and L-extension run for all `n ≤ 1000`.
 
+## Phase 3 — search engine and scheduler
+
+33. **Energy** uses squared penetration depths on cell-list near pairs plus squared wall violations against a fixed container side `s`. Active-axis SAT subgradients are used for center coordinates; angle derivatives use central differences on `sep_pair` / `half_extent`.
+34. **Shrink schedule** starts at `s0 = max(sqrt(n), 1.02 * best_known_L)`. When `E < 1e-24`, shrink by factor `1 - eta` (`eta` starts at `1e-2`, halved on failure) down to `eta < 1e-9`.
+35. **Seeded reproduction** (Phase 3 acceptance) uses low temperature (`1e-4`) with the current best packing as the seed. Hitting the snapshot/best L within `1e-6` counts as reproduction for that `n`.
+36. **Scheduler** uses a file-based queue under `results/logs/queue/` with `queued → running/ → done/` renames; one process per job. Round-robin skips `n = k^2` and, by default, `k^2-1` and `k^2-2`.
+37. **Basin logs** live at `results/logs/basin_n{n}.json` with verified L histogram keys rounded to `1e-6`.
+38. Default wall-clock budgets in `config.yaml` follow the spec (10 / 30 minutes). Acceptance and laptop runs may pass shorter `--budget-s` overrides; measured times go in `docs/BENCH.md`.
+
 ## Phase scope
 
-33. Phase 3+ (anneal search, scheduler, polish, evolve, section 12) is not implemented yet. Package stubs exist for layout compatibility.
+39. Phase 4+ (polish, export at scale, evolve, section 12) is not implemented yet.

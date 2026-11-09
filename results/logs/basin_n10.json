@@ -1,0 +1,44 @@
+{
+  "n": 10,
+  "runs": [
+    {
+      "seed": 20261119,
+      "seed_type": "repro_best",
+      "L_verified": 3.707106781188255,
+      "improved": false,
+      "elapsed_s": 0.005860226999971019,
+      "target": 3.707106781189255,
+      "hit": true,
+      "fast_L": 3.707106781188255
+    },
+    {
+      "seed": 10001,
+      "seed_type": "best",
+      "L_verified": 3.707106781188255,
+      "improved": false,
+      "elapsed_s": 5.27562869999997,
+      "steps": 39,
+      "s_final": 3.7092880535325463,
+      "promoted": false
+    }
+  ],
+  "histogram": {
+    "3.707107": 2
+  },
+  "by_seed_type": {
+    "repro_best": {
+      "runs": 1,
+      "improvements": 0,
+      "histogram": {
+        "3.707107": 1
+      }
+    },
+    "best": {
+      "runs": 1,
+      "improvements": 0,
+      "histogram": {
+        "3.707107": 1
+      }
+    }
+  }
+}
