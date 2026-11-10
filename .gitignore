@@ -11,3 +11,12 @@ build/
 venv/
 *.history.json
 .DS_Store
+
+# Cached record HTML/SVG snapshots (re-downloadable)
+data/records_snapshot/*/
+!data/records_snapshot/.gitkeep
+
+# Scheduler runtime queue (resumable on disk; not source)
+results/logs/queue/
+
+*.log

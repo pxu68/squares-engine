@@ -1,0 +1,27 @@
+{
+  "n": 27,
+  "runs": [
+    {
+      "seed": 20261136,
+      "seed_type": "repro_best",
+      "L_verified": 5.707106781191256,
+      "improved": false,
+      "elapsed_s": 0.02013714899999286,
+      "target": 5.707106781191256,
+      "hit": true,
+      "fast_L": 5.707106781191255
+    }
+  ],
+  "histogram": {
+    "5.707107": 1
+  },
+  "by_seed_type": {
+    "repro_best": {
+      "runs": 1,
+      "improvements": 0,
+      "histogram": {
+        "5.707107": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "n": 37,
+  "runs": [
+    {
+      "seed": 20631109,
+      "seed_type": "repro_best",
+      "L_verified": 6.59861960924996,
+      "improved": false,
+      "elapsed_s": 0.026410594000026322,
+      "target": 6.59861960924996,
+      "hit": true,
+      "fast_L": 6.598619609249959
+    },
+    {
+      "seed": 20631110,
+      "seed_type": "repro_best",
+      "L_verified": 6.59861960924996,
+      "improved": false,
+      "elapsed_s": 0.026715073999980632,
+      "target": 6.59861960924996,
+      "hit": true,
+      "fast_L": 6.598619609249959
+    },
+    {
+      "seed": 20631111,
+      "seed_type": "repro_best",
+      "L_verified": 6.59861960924996,
+      "improved": false,
+      "elapsed_s": 0.02654543099993134,
+      "target": 6.59861960924996,
+      "hit": true,
+      "fast_L": 6.598619609249959
+    }
+  ],
+  "histogram": {
+    "6.598620": 3
+  },
+  "by_seed_type": {
+    "repro_best": {
+      "runs": 3,
+      "improvements": 0,
+      "histogram": {
+        "6.598620": 3
+      }
+    }
+  }
+}

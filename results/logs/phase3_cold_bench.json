@@ -1,0 +1,38 @@
+[
+  {
+    "n": 31,
+    "target": 6.0,
+    "seeds": 2,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "mean_seconds": 20.078183479500012,
+    "core_hours_per_seed": 0.005577273188750003,
+    "budget_s": 20.0,
+    "mode": "cold_structured_random",
+    "best_gap": 0.006424652179508605
+  },
+  {
+    "n": 37,
+    "target": 6.59861960924996,
+    "seeds": 2,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "mean_seconds": 20.080000603500025,
+    "core_hours_per_seed": 0.005577777945416674,
+    "budget_s": 20.0,
+    "mode": "cold_structured_random",
+    "best_gap": null
+  },
+  {
+    "n": 41,
+    "target": 6.926693094474729,
+    "seeds": 2,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "mean_seconds": 20.040215138000008,
+    "core_hours_per_seed": 0.005566726427222225,
+    "budget_s": 20.0,
+    "mode": "cold_structured_random",
+    "best_gap": 0.08400020069872216
+  }
+]

@@ -43,3 +43,14 @@ constructions:
   composition_max_side: 7
   construction_scan_cap: 150
   removal_max_source_gap: 80
+
+search:
+  # Default job budgets (section 8); acceptance scripts may override downward.
+  budget_s_small: 600
+  budget_s_large: 1800
+  temperature: 1.0e-3
+  eta0: 1.0e-2
+  energy_feasible: 1.0e-24
+  max_basin_runs_deprioritize: 200
+  skip_near_square: true
+  workers: 1
