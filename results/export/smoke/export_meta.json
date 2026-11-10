@@ -1,0 +1,262 @@
+{
+  "n_exported": 36,
+  "exclude_origin": [
+    "imported"
+  ],
+  "squares_csv": "/workspace/results/export/smoke/squares.csv",
+  "L_by_n_csv": "/workspace/results/export/smoke/L_by_n.csv",
+  "summaries": [
+    {
+      "n": 1,
+      "L": 1.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 1
+    },
+    {
+      "n": 2,
+      "L": 2.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 2
+    },
+    {
+      "n": 3,
+      "L": 2.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 3
+    },
+    {
+      "n": 4,
+      "L": 2.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 4
+    },
+    {
+      "n": 6,
+      "L": 3.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 6
+    },
+    {
+      "n": 7,
+      "L": 3.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 7
+    },
+    {
+      "n": 8,
+      "L": 3.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 8
+    },
+    {
+      "n": 9,
+      "L": 3.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 9
+    },
+    {
+      "n": 10,
+      "L": 3.707106781188255,
+      "origin": "constructed",
+      "method": "l_extension_from_5",
+      "n_squares": 10
+    },
+    {
+      "n": 12,
+      "L": 4.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 12
+    },
+    {
+      "n": 13,
+      "L": 4.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 13
+    },
+    {
+      "n": 14,
+      "L": 4.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 14
+    },
+    {
+      "n": 15,
+      "L": 4.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 15
+    },
+    {
+      "n": 16,
+      "L": 4.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 16
+    },
+    {
+      "n": 20,
+      "L": 5.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 20
+    },
+    {
+      "n": 21,
+      "L": 5.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 21
+    },
+    {
+      "n": 22,
+      "L": 5.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 22
+    },
+    {
+      "n": 23,
+      "L": 5.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 23
+    },
+    {
+      "n": 24,
+      "L": 5.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 24
+    },
+    {
+      "n": 25,
+      "L": 5.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 25
+    },
+    {
+      "n": 30,
+      "L": 6.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 30
+    },
+    {
+      "n": 31,
+      "L": 6.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 31
+    },
+    {
+      "n": 32,
+      "L": 6.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 32
+    },
+    {
+      "n": 33,
+      "L": 6.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 33
+    },
+    {
+      "n": 34,
+      "L": 6.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 34
+    },
+    {
+      "n": 35,
+      "L": 6.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 35
+    },
+    {
+      "n": 36,
+      "L": 6.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 36
+    },
+    {
+      "n": 38,
+      "L": 6.707106781191257,
+      "origin": "constructed",
+      "method": "l_extension_from_27",
+      "n_squares": 38
+    },
+    {
+      "n": 42,
+      "L": 7.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 42
+    },
+    {
+      "n": 43,
+      "L": 7.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 43
+    },
+    {
+      "n": 44,
+      "L": 7.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 44
+    },
+    {
+      "n": 45,
+      "L": 7.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 45
+    },
+    {
+      "n": 46,
+      "L": 7.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 46
+    },
+    {
+      "n": 47,
+      "L": 7.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 47
+    },
+    {
+      "n": 48,
+      "L": 7.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 48
+    },
+    {
+      "n": 49,
+      "L": 7.0,
+      "origin": "constructed",
+      "method": "grid",
+      "n_squares": 49
+    }
+  ]
+}

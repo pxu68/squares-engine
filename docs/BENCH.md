@@ -48,3 +48,27 @@ Log: `results/logs/phase3_cold_bench.json`.
 ## Scheduler smoke
 
 File queue under `results/logs/queue/` with 2 workers, `--budget-s 5`, n∈{5,6,10,11}: 4 jobs completed (`status=done`). Basin files written under `results/logs/basin_n*.json`.
+
+---
+
+# Phase 4
+
+Hardware: same cloud agent VM. Seeded low-temperature anneal + Newton polish sample (not a full R740 sweep).
+
+## Seeded search sample
+
+| Range | Eligible pool (skip near-squares) | Sampled | Budget / n | Promoted | Improved vs Phase-2 baseline | Mean seconds |
+|---|---:|---:|---:|---:|---:|---:|
+| 51..324 | 241 | 18 | 20 s | 0 | **0** | 23.5 |
+| 325..1000 | 637 | 12 | 15 s | 0 | **0** | 44.0 |
+
+- Mid sample n: 60, 71, 89, 109, 125, 145, 151, 164, 183, 202, 209, 232, 248, 263, 274, 290, 307, 312  
+- High sample n: 367, 408, 438, 498, 600, 636, 688, 769, 815, 871, 891, 992  
+- Log: `results/logs/phase4_search_summary.json`  
+- Finding: short seeded runs did not beat the Phase-2 baseline; longer budgets / more seeds needed on the R740 for real improvement hunting.
+
+## Export self-check
+
+- `scripts/export_packings.py --all --exclude-origin imported` → 892 packings (imports excluded).
+- Re-verify from `squares.csv` alone: **892 / 892 passed** (~194 s wall with 4 workers).
+- Evidence: `results/export/no_imported/export_reverify.json`, `export_meta.json`, `L_by_n.csv` (large `squares.csv` gitignored).

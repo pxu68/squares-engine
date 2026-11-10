@@ -19,4 +19,7 @@ data/records_snapshot/*/
 # Scheduler runtime queue (resumable on disk; not source)
 results/logs/queue/
 
+# Large export CSVs (meta + reverify JSON are kept)
+results/export/**/squares.csv
+
 *.log

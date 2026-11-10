@@ -1,0 +1,28 @@
+{
+  "n": 89,
+  "runs": [
+    {
+      "seed": 20261198,
+      "seed_type": "phase4_best",
+      "L_verified": 9.949747468314783,
+      "improved": false,
+      "elapsed_s": 21.003930315999924,
+      "baseline_L": 9.949747468314783,
+      "improved_vs_baseline": false,
+      "method": "anneal_polish_checked",
+      "budget_s": 20.0
+    }
+  ],
+  "histogram": {
+    "9.949747": 1
+  },
+  "by_seed_type": {
+    "phase4_best": {
+      "runs": 1,
+      "improvements": 0,
+      "histogram": {
+        "9.949747": 1
+      }
+    }
+  }
+}
