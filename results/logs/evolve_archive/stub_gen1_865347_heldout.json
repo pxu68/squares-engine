@@ -1,0 +1,65 @@
+{
+  "program_name": "stub_gen1_865347",
+  "ns": [
+    18,
+    19,
+    28,
+    37,
+    53
+  ],
+  "mean_score": 0.0,
+  "n_verified": 5,
+  "n_beat_grid": 5,
+  "trials": [
+    {
+      "n": 18,
+      "L_found": 4.822875655536119,
+      "L_best_known": 4.822875655536119,
+      "grid_L": 5.0,
+      "verified": true,
+      "relative_gap": 0.0,
+      "scored": 0.0,
+      "reason": "verified|ok"
+    },
+    {
+      "n": 19,
+      "L_found": 4.885618083168013,
+      "L_best_known": 4.885618083168013,
+      "grid_L": 5.0,
+      "verified": true,
+      "relative_gap": 0.0,
+      "scored": 0.0,
+      "reason": "verified|ok"
+    },
+    {
+      "n": 28,
+      "L_found": 5.824444616678884,
+      "L_best_known": 5.824444616678884,
+      "grid_L": 6.0,
+      "verified": true,
+      "relative_gap": 0.0,
+      "scored": 0.0,
+      "reason": "verified|ok"
+    },
+    {
+      "n": 37,
+      "L_found": 6.59861960924996,
+      "L_best_known": 6.59861960924996,
+      "grid_L": 7.0,
+      "verified": true,
+      "relative_gap": 0.0,
+      "scored": 0.0,
+      "reason": "verified|ok"
+    },
+    {
+      "n": 53,
+      "L_found": 7.822875655539119,
+      "L_best_known": 7.822875655539119,
+      "grid_L": 8.0,
+      "verified": true,
+      "relative_gap": 0.0,
+      "scored": 0.0,
+      "reason": "verified|ok"
+    }
+  ]
+}

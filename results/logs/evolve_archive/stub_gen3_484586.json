@@ -1,0 +1,29 @@
+{
+  "name": "stub_gen3_484586",
+  "eta0": 0.012100689953577127,
+  "temperature": 0.002110761326130959,
+  "cool_factor": 0.9964235371659457,
+  "seeded_expand": 1.0014067957513884,
+  "max_lbfgs_iter": 87,
+  "energy_feasible": 1e-24,
+  "move_probs": [
+    0.1714087405699445,
+    0.24388973961688382,
+    0.2116273660572582,
+    0.10680806324447245,
+    0.1645235089864225,
+    0.10174258152501842
+  ],
+  "parent": "section7_default",
+  "method": "stub_mutate",
+  "generation": 3,
+  "notes": "stub mutate from section7_default; ctx_keys=['basin_summary', 'failure_notes', 'heldout_score', 'train_score']",
+  "move_names": [
+    "translate",
+    "rotate",
+    "jiggle",
+    "swap_orientation",
+    "relocate",
+    "shift_row"
+  ]
+}

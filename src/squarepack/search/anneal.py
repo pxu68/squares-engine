@@ -5,7 +5,7 @@ from __future__ import annotations
 import math
 import time
 from dataclasses import dataclass, field
-from typing import Any, Callable
+from typing import Any, Callable, Sequence
 
 import numpy as np
 from scipy.optimize import minimize
@@ -164,6 +164,9 @@ def anneal(
     max_lbfgs_iter: int = 80,
     early_stop_L: float | None = None,
     early_stop_tol: float = 1e-6,
+    move_probs: Sequence[float] | None = None,
+    cool_factor: float = 0.995,
+    seeded_expand: float = 1.002,
     log_fn: Callable[[dict[str, Any]], None] | None = None,
 ) -> AnnealResult:
     """Run shrink-the-box annealing with Metropolis basin hops.
@@ -173,8 +176,15 @@ def anneal(
     """
     t0 = time.perf_counter()
     rng = np.random.default_rng(seed)
-    squares, s = default_init(n, init_squares, rng, best_known_L)
+    squares, s = default_init(
+        n,
+        init_squares,
+        rng,
+        best_known_L,
+        seeded_expand=float(seeded_expand),
+    )
     eta = float(eta0)
+    temp = float(temperature)
     # Prefer the raw seed geometry as the incumbent when it already verifies.
     if init_squares is not None:
         seed_sq, seed_L = normalize_to_origin(np.asarray(init_squares, dtype=np.float64))
@@ -260,18 +270,18 @@ def anneal(
                 _emit({"event": "shrink_fail", "s_try": s_try, "E": e_try, "eta": eta})
                 if eta < 1e-9:
                     # Perturb and continue at current s
-                    squares = apply_random_move(squares, rng, s)[0]
+                    squares = apply_random_move(squares, rng, s, probs=move_probs)[0]
                     squares, e = _lbfgs_minimize(squares, s, maxiter=max_lbfgs_iter)
                     steps += 1
                     eta = float(eta0) * 0.25
             continue
 
         # Not feasible: perturb + minimize (Metropolis on energy)
-        proposal, move = apply_random_move(squares, rng, s)
+        proposal, move = apply_random_move(squares, rng, s, probs=move_probs)
         proposal, e2 = _lbfgs_minimize(proposal, s, maxiter=max_lbfgs_iter)
         steps += 1
         dE = e2 - e
-        accept = dE <= 0.0 or (temperature > 0 and rng.random() < math.exp(-dE / max(temperature, 1e-30)))
+        accept = dE <= 0.0 or (temp > 0 and rng.random() < math.exp(-dE / max(temp, 1e-30)))
         if accept:
             squares, e = proposal, e2
             _emit({"event": "accept", "move": move, "E": e, "s": s})
@@ -279,7 +289,7 @@ def anneal(
             _emit({"event": "reject", "move": move, "E": e2, "s": s})
 
         # Cool slightly
-        temperature *= 0.995
+        temp *= float(cool_factor)
 
         # Opportunistic candidate if somehow feasible
         if e < energy_feasible:

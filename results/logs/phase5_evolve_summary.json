@@ -1,0 +1,1129 @@
+{
+  "baseline_train": 0.14285714285714285,
+  "baseline_heldout": 0.0,
+  "best_program": null,
+  "best_train": null,
+  "best_heldout": null,
+  "improved_heldout": false,
+  "mutator": "stub (no LLM API key)",
+  "generations": [
+    {
+      "generation": 1,
+      "program": {
+        "name": "stub_gen1_722615",
+        "eta0": 0.012611214887547236,
+        "temperature": 0.0029848257698661326,
+        "cool_factor": 0.9950946661940451,
+        "seeded_expand": 1.0030286815317075,
+        "max_lbfgs_iter": 72,
+        "energy_feasible": 1e-24,
+        "move_probs": [
+          0.2893866755089688,
+          0.2469183331286773,
+          0.21174089676269464,
+          0.07283573539984445,
+          0.1294464686917088,
+          0.049671890508105956
+        ],
+        "parent": "section7_default",
+        "method": "stub_mutate",
+        "generation": 1,
+        "notes": "stub mutate from section7_default; ctx_keys=['basin_summary', 'failure_notes', 'heldout_score', 'train_score']",
+        "move_names": [
+          "translate",
+          "rotate",
+          "jiggle",
+          "swap_orientation",
+          "relocate",
+          "shift_row"
+        ]
+      },
+      "train": {
+        "program_name": "stub_gen1_722615",
+        "ns": [
+          11,
+          17,
+          26,
+          27,
+          29,
+          41,
+          47
+        ],
+        "mean_score": 0.14285714285714285,
+        "n_verified": 7,
+        "n_beat_grid": 6,
+        "trials": [
+          {
+            "n": 11,
+            "L_found": 3.8770835900256913,
+            "L_best_known": 3.8770835900256913,
+            "grid_L": 4.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 17,
+            "L_found": 4.675530093608228,
+            "L_best_known": 4.675530093608228,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 26,
+            "L_found": 5.621320343564265,
+            "L_best_known": 5.621320343564265,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 27,
+            "L_found": 5.707106781191256,
+            "L_best_known": 5.707106781191256,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 29,
+            "L_found": 5.933833462681864,
+            "L_best_known": 5.933833462681864,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 41,
+            "L_found": 6.926693094474729,
+            "L_best_known": 6.926693094474729,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 47,
+            "L_found": 7.0,
+            "L_best_known": 7.0,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 1.0,
+            "reason": "verified|trivial_grid_no_credit"
+          }
+        ]
+      },
+      "heldout": {
+        "program_name": "stub_gen1_722615",
+        "ns": [
+          18,
+          19,
+          28,
+          37,
+          53
+        ],
+        "mean_score": 0.0,
+        "n_verified": 5,
+        "n_beat_grid": 5,
+        "trials": [
+          {
+            "n": 18,
+            "L_found": 4.822875655536119,
+            "L_best_known": 4.822875655536119,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 19,
+            "L_found": 4.885618083168013,
+            "L_best_known": 4.885618083168013,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 28,
+            "L_found": 5.824444616678884,
+            "L_best_known": 5.824444616678884,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 37,
+            "L_found": 6.59861960924996,
+            "L_best_known": 6.59861960924996,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 53,
+            "L_found": 7.822875655539119,
+            "L_best_known": 7.822875655539119,
+            "grid_L": 8.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          }
+        ]
+      },
+      "accepted": false,
+      "reason": "heldout_or_train_not_improved"
+    },
+    {
+      "generation": 1,
+      "program": {
+        "name": "stub_gen1_865347",
+        "eta0": 0.013808190634944246,
+        "temperature": 0.002160329427235599,
+        "cool_factor": 0.9979223942271263,
+        "seeded_expand": 1.0006496892017385,
+        "max_lbfgs_iter": 79,
+        "energy_feasible": 1e-24,
+        "move_probs": [
+          0.23785589859102427,
+          0.22888904800715468,
+          0.2584307940903244,
+          0.0877660485256549,
+          0.09378722507782793,
+          0.09327098570801391
+        ],
+        "parent": "section7_default",
+        "method": "stub_mutate",
+        "generation": 1,
+        "notes": "stub mutate from section7_default; ctx_keys=['basin_summary', 'failure_notes', 'heldout_score', 'train_score']",
+        "move_names": [
+          "translate",
+          "rotate",
+          "jiggle",
+          "swap_orientation",
+          "relocate",
+          "shift_row"
+        ]
+      },
+      "train": {
+        "program_name": "stub_gen1_865347",
+        "ns": [
+          11,
+          17,
+          26,
+          27,
+          29,
+          41,
+          47
+        ],
+        "mean_score": 0.14285714285714285,
+        "n_verified": 7,
+        "n_beat_grid": 6,
+        "trials": [
+          {
+            "n": 11,
+            "L_found": 3.8770835900256913,
+            "L_best_known": 3.8770835900256913,
+            "grid_L": 4.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 17,
+            "L_found": 4.675530093608228,
+            "L_best_known": 4.675530093608228,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 26,
+            "L_found": 5.621320343564265,
+            "L_best_known": 5.621320343564265,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 27,
+            "L_found": 5.707106781191256,
+            "L_best_known": 5.707106781191256,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 29,
+            "L_found": 5.933833462681864,
+            "L_best_known": 5.933833462681864,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 41,
+            "L_found": 6.926693094474729,
+            "L_best_known": 6.926693094474729,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 47,
+            "L_found": 7.0,
+            "L_best_known": 7.0,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 1.0,
+            "reason": "verified|trivial_grid_no_credit"
+          }
+        ]
+      },
+      "heldout": {
+        "program_name": "stub_gen1_865347",
+        "ns": [
+          18,
+          19,
+          28,
+          37,
+          53
+        ],
+        "mean_score": 0.0,
+        "n_verified": 5,
+        "n_beat_grid": 5,
+        "trials": [
+          {
+            "n": 18,
+            "L_found": 4.822875655536119,
+            "L_best_known": 4.822875655536119,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 19,
+            "L_found": 4.885618083168013,
+            "L_best_known": 4.885618083168013,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 28,
+            "L_found": 5.824444616678884,
+            "L_best_known": 5.824444616678884,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 37,
+            "L_found": 6.59861960924996,
+            "L_best_known": 6.59861960924996,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 53,
+            "L_found": 7.822875655539119,
+            "L_best_known": 7.822875655539119,
+            "grid_L": 8.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          }
+        ]
+      },
+      "accepted": false,
+      "reason": "heldout_or_train_not_improved"
+    },
+    {
+      "generation": 2,
+      "program": {
+        "name": "stub_gen2_352924",
+        "eta0": 0.01023871171328725,
+        "temperature": 0.0006371629161087152,
+        "cool_factor": 0.9921740285449873,
+        "seeded_expand": 1.0029513297627521,
+        "max_lbfgs_iter": 70,
+        "energy_feasible": 1e-24,
+        "move_probs": [
+          0.2142137613588003,
+          0.23656951111520524,
+          0.2401507578599876,
+          0.06365057853947724,
+          0.1271626503453513,
+          0.11825274078117844
+        ],
+        "parent": "section7_default",
+        "method": "stub_mutate",
+        "generation": 2,
+        "notes": "stub mutate from section7_default; ctx_keys=['basin_summary', 'failure_notes', 'heldout_score', 'train_score']",
+        "move_names": [
+          "translate",
+          "rotate",
+          "jiggle",
+          "swap_orientation",
+          "relocate",
+          "shift_row"
+        ]
+      },
+      "train": {
+        "program_name": "stub_gen2_352924",
+        "ns": [
+          11,
+          17,
+          26,
+          27,
+          29,
+          41,
+          47
+        ],
+        "mean_score": 0.14285714285714285,
+        "n_verified": 7,
+        "n_beat_grid": 6,
+        "trials": [
+          {
+            "n": 11,
+            "L_found": 3.8770835900256913,
+            "L_best_known": 3.8770835900256913,
+            "grid_L": 4.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 17,
+            "L_found": 4.675530093608228,
+            "L_best_known": 4.675530093608228,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 26,
+            "L_found": 5.621320343564265,
+            "L_best_known": 5.621320343564265,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 27,
+            "L_found": 5.707106781191256,
+            "L_best_known": 5.707106781191256,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 29,
+            "L_found": 5.933833462681864,
+            "L_best_known": 5.933833462681864,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 41,
+            "L_found": 6.926693094474729,
+            "L_best_known": 6.926693094474729,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 47,
+            "L_found": 7.0,
+            "L_best_known": 7.0,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 1.0,
+            "reason": "verified|trivial_grid_no_credit"
+          }
+        ]
+      },
+      "heldout": {
+        "program_name": "stub_gen2_352924",
+        "ns": [
+          18,
+          19,
+          28,
+          37,
+          53
+        ],
+        "mean_score": 0.0,
+        "n_verified": 5,
+        "n_beat_grid": 5,
+        "trials": [
+          {
+            "n": 18,
+            "L_found": 4.822875655536119,
+            "L_best_known": 4.822875655536119,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 19,
+            "L_found": 4.885618083168013,
+            "L_best_known": 4.885618083168013,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 28,
+            "L_found": 5.824444616678884,
+            "L_best_known": 5.824444616678884,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 37,
+            "L_found": 6.59861960924996,
+            "L_best_known": 6.59861960924996,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 53,
+            "L_found": 7.822875655539119,
+            "L_best_known": 7.822875655539119,
+            "grid_L": 8.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          }
+        ]
+      },
+      "accepted": false,
+      "reason": "heldout_or_train_not_improved"
+    },
+    {
+      "generation": 2,
+      "program": {
+        "name": "stub_gen2_131280",
+        "eta0": 0.008406740386185474,
+        "temperature": 0.002072151658131222,
+        "cool_factor": 0.9951447741686892,
+        "seeded_expand": 1.0050801234367595,
+        "max_lbfgs_iter": 64,
+        "energy_feasible": 1e-24,
+        "move_probs": [
+          0.21697393291088662,
+          0.12340242606443934,
+          0.20950105665152505,
+          0.16848243130814275,
+          0.14506959027183786,
+          0.1365705627931684
+        ],
+        "parent": "section7_default",
+        "method": "stub_mutate",
+        "generation": 2,
+        "notes": "stub mutate from section7_default; ctx_keys=['basin_summary', 'failure_notes', 'heldout_score', 'train_score']",
+        "move_names": [
+          "translate",
+          "rotate",
+          "jiggle",
+          "swap_orientation",
+          "relocate",
+          "shift_row"
+        ]
+      },
+      "train": {
+        "program_name": "stub_gen2_131280",
+        "ns": [
+          11,
+          17,
+          26,
+          27,
+          29,
+          41,
+          47
+        ],
+        "mean_score": 0.14285714285714285,
+        "n_verified": 7,
+        "n_beat_grid": 6,
+        "trials": [
+          {
+            "n": 11,
+            "L_found": 3.8770835900256913,
+            "L_best_known": 3.8770835900256913,
+            "grid_L": 4.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 17,
+            "L_found": 4.675530093608228,
+            "L_best_known": 4.675530093608228,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 26,
+            "L_found": 5.621320343564265,
+            "L_best_known": 5.621320343564265,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 27,
+            "L_found": 5.707106781191256,
+            "L_best_known": 5.707106781191256,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 29,
+            "L_found": 5.933833462681864,
+            "L_best_known": 5.933833462681864,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 41,
+            "L_found": 6.926693094474729,
+            "L_best_known": 6.926693094474729,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 47,
+            "L_found": 7.0,
+            "L_best_known": 7.0,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 1.0,
+            "reason": "verified|trivial_grid_no_credit"
+          }
+        ]
+      },
+      "heldout": {
+        "program_name": "stub_gen2_131280",
+        "ns": [
+          18,
+          19,
+          28,
+          37,
+          53
+        ],
+        "mean_score": 0.0,
+        "n_verified": 5,
+        "n_beat_grid": 5,
+        "trials": [
+          {
+            "n": 18,
+            "L_found": 4.822875655536119,
+            "L_best_known": 4.822875655536119,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 19,
+            "L_found": 4.885618083168013,
+            "L_best_known": 4.885618083168013,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 28,
+            "L_found": 5.824444616678884,
+            "L_best_known": 5.824444616678884,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 37,
+            "L_found": 6.59861960924996,
+            "L_best_known": 6.59861960924996,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 53,
+            "L_found": 7.822875655539119,
+            "L_best_known": 7.822875655539119,
+            "grid_L": 8.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          }
+        ]
+      },
+      "accepted": false,
+      "reason": "heldout_or_train_not_improved"
+    },
+    {
+      "generation": 3,
+      "program": {
+        "name": "stub_gen3_199733",
+        "eta0": 0.008706105124740227,
+        "temperature": 0.0019082422032773222,
+        "cool_factor": 0.9950519436396069,
+        "seeded_expand": 1.0031688461217445,
+        "max_lbfgs_iter": 98,
+        "energy_feasible": 1e-24,
+        "move_probs": [
+          0.2658202335832667,
+          0.2604934124740921,
+          0.11815128968632621,
+          0.10313142628540042,
+          0.18752222323505932,
+          0.06488141473585529
+        ],
+        "parent": "section7_default",
+        "method": "stub_mutate",
+        "generation": 3,
+        "notes": "stub mutate from section7_default; ctx_keys=['basin_summary', 'failure_notes', 'heldout_score', 'train_score']",
+        "move_names": [
+          "translate",
+          "rotate",
+          "jiggle",
+          "swap_orientation",
+          "relocate",
+          "shift_row"
+        ]
+      },
+      "train": {
+        "program_name": "stub_gen3_199733",
+        "ns": [
+          11,
+          17,
+          26,
+          27,
+          29,
+          41,
+          47
+        ],
+        "mean_score": 0.14285714285714285,
+        "n_verified": 7,
+        "n_beat_grid": 6,
+        "trials": [
+          {
+            "n": 11,
+            "L_found": 3.8770835900256913,
+            "L_best_known": 3.8770835900256913,
+            "grid_L": 4.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 17,
+            "L_found": 4.675530093608228,
+            "L_best_known": 4.675530093608228,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 26,
+            "L_found": 5.621320343564265,
+            "L_best_known": 5.621320343564265,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 27,
+            "L_found": 5.707106781191256,
+            "L_best_known": 5.707106781191256,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 29,
+            "L_found": 5.933833462681864,
+            "L_best_known": 5.933833462681864,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 41,
+            "L_found": 6.926693094474729,
+            "L_best_known": 6.926693094474729,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 47,
+            "L_found": 7.0,
+            "L_best_known": 7.0,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 1.0,
+            "reason": "verified|trivial_grid_no_credit"
+          }
+        ]
+      },
+      "heldout": {
+        "program_name": "stub_gen3_199733",
+        "ns": [
+          18,
+          19,
+          28,
+          37,
+          53
+        ],
+        "mean_score": 0.0,
+        "n_verified": 5,
+        "n_beat_grid": 5,
+        "trials": [
+          {
+            "n": 18,
+            "L_found": 4.822875655536119,
+            "L_best_known": 4.822875655536119,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 19,
+            "L_found": 4.885618083168013,
+            "L_best_known": 4.885618083168013,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 28,
+            "L_found": 5.824444616678884,
+            "L_best_known": 5.824444616678884,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 37,
+            "L_found": 6.59861960924996,
+            "L_best_known": 6.59861960924996,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 53,
+            "L_found": 7.822875655539119,
+            "L_best_known": 7.822875655539119,
+            "grid_L": 8.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          }
+        ]
+      },
+      "accepted": false,
+      "reason": "heldout_or_train_not_improved"
+    },
+    {
+      "generation": 3,
+      "program": {
+        "name": "stub_gen3_484586",
+        "eta0": 0.012100689953577127,
+        "temperature": 0.002110761326130959,
+        "cool_factor": 0.9964235371659457,
+        "seeded_expand": 1.0014067957513884,
+        "max_lbfgs_iter": 87,
+        "energy_feasible": 1e-24,
+        "move_probs": [
+          0.1714087405699445,
+          0.24388973961688382,
+          0.2116273660572582,
+          0.10680806324447245,
+          0.1645235089864225,
+          0.10174258152501842
+        ],
+        "parent": "section7_default",
+        "method": "stub_mutate",
+        "generation": 3,
+        "notes": "stub mutate from section7_default; ctx_keys=['basin_summary', 'failure_notes', 'heldout_score', 'train_score']",
+        "move_names": [
+          "translate",
+          "rotate",
+          "jiggle",
+          "swap_orientation",
+          "relocate",
+          "shift_row"
+        ]
+      },
+      "train": {
+        "program_name": "stub_gen3_484586",
+        "ns": [
+          11,
+          17,
+          26,
+          27,
+          29,
+          41,
+          47
+        ],
+        "mean_score": 0.14285714285714285,
+        "n_verified": 7,
+        "n_beat_grid": 6,
+        "trials": [
+          {
+            "n": 11,
+            "L_found": 3.8770835900256913,
+            "L_best_known": 3.8770835900256913,
+            "grid_L": 4.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 17,
+            "L_found": 4.675530093608228,
+            "L_best_known": 4.675530093608228,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 26,
+            "L_found": 5.621320343564265,
+            "L_best_known": 5.621320343564265,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 27,
+            "L_found": 5.707106781191256,
+            "L_best_known": 5.707106781191256,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 29,
+            "L_found": 5.933833462681864,
+            "L_best_known": 5.933833462681864,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 41,
+            "L_found": 6.926693094474729,
+            "L_best_known": 6.926693094474729,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 47,
+            "L_found": 7.0,
+            "L_best_known": 7.0,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 1.0,
+            "reason": "verified|trivial_grid_no_credit"
+          }
+        ]
+      },
+      "heldout": {
+        "program_name": "stub_gen3_484586",
+        "ns": [
+          18,
+          19,
+          28,
+          37,
+          53
+        ],
+        "mean_score": 0.0,
+        "n_verified": 5,
+        "n_beat_grid": 5,
+        "trials": [
+          {
+            "n": 18,
+            "L_found": 4.822875655536119,
+            "L_best_known": 4.822875655536119,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 19,
+            "L_found": 4.885618083168013,
+            "L_best_known": 4.885618083168013,
+            "grid_L": 5.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 28,
+            "L_found": 5.824444616678884,
+            "L_best_known": 5.824444616678884,
+            "grid_L": 6.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 37,
+            "L_found": 6.59861960924996,
+            "L_best_known": 6.59861960924996,
+            "grid_L": 7.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          },
+          {
+            "n": 53,
+            "L_found": 7.822875655539119,
+            "L_best_known": 7.822875655539119,
+            "grid_L": 8.0,
+            "verified": true,
+            "relative_gap": 0.0,
+            "scored": 0.0,
+            "reason": "verified|ok"
+          }
+        ]
+      },
+      "accepted": false,
+      "reason": "heldout_or_train_not_improved"
+    }
+  ],
+  "archive_dir": "/workspace/results/logs/evolve_archive",
+  "notes": "mutator=stub (no LLM API key); train_ns=[11, 17, 26, 27, 29, 41, 47]; held_ns=[18, 19, 28, 37, 53]; budget_s=5.0; improved_heldout=False"
+}
