@@ -3,6 +3,8 @@
 Pack `n` unit squares into the smallest axis-aligned square for `n = 1..1000`,
 with every stored result fully verified.
 
+**Run book:** [docs/RUN.md](docs/RUN.md) (install, test, baseline, search, export, evolve).
+
 ## Phase 1 status
 
 Geometry, verifier, atomic best-result store, and axis-aligned grid baseline.
